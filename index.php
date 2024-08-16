@@ -114,7 +114,7 @@ class tropicFruit extends Fruit {
 $banana = new tropicFruit('yellow','good');
 
 var_dump($banana); 
-				*/
+				
 
 
 
@@ -156,4 +156,11 @@ $se2020 = new iPhone(2020,'12 hour',24);
 
 $nokia = new telefon(2000,'24 hour', 13);
 var_dump($se2020->getPower());
+					*/
+
+
+
+//Abstract class
+//Abstract classdan obekt olib bumaydi, faqat voris olib buladi(extends)
+//
 
