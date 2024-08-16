@@ -91,7 +91,7 @@ class tiger extends animal{
 
 $mountain_tiger = new tiger(4,100);
 
-var_dump($mountain_tiger->speed()); */
+var_dump($mountain_tiger->speed()); 
 
 
 class Fruit {
@@ -113,5 +113,47 @@ class tropicFruit extends Fruit {
 
 $banana = new tropicFruit('yellow','good');
 
-var_dump($banana);
+var_dump($banana); 
+				*/
+
+
+
+//Access Motifiers
+//public (umumiy)
+//protected (himoyalangan)
+//private (shaxsiy)
+
+class telefon {
+	//atribut
+	public $year;
+	protected $power;
+	private $size;
+
+	//construct
+	public function __construct($year,$power,$size){
+		$this->year = $year;
+		$this->power = $power;
+		$this->size = $size;
+	}
+
+	public function getPower(){
+		return $this->power;
+	}
+
+	
+}
+
+class iPhone extends telefon{
+	public function getPower(){
+		return $this->power;
+	}
+	
+	
+}
+
+$se2020 = new iPhone(2020,'12 hour',24);
+
+
+$nokia = new telefon(2000,'24 hour', 13);
+var_dump($se2020->getPower());
 
