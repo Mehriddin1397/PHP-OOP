@@ -57,7 +57,7 @@ var_dump($dell->charge()); */
 //overriding (ustidan yozvorish)
 //final (oxiri, u classdan extends qilib bumaydi, buni methodlarga ham qullasa buladi) 
 
-class animal{
+/** final class animal{
     //atributs
 	public $foots;
 	public $weight;
@@ -91,5 +91,27 @@ class tiger extends animal{
 
 $mountain_tiger = new tiger(4,100);
 
-var_dump($mountain_tiger->speed());
+var_dump($mountain_tiger->speed()); */
+
+
+class Fruit {
+	//atribut
+	public $color;
+	public $taste;
+
+	//construct
+	public function __construct($color, $taste){
+		$this->color = $color;
+		$this->taste = $taste;
+	}
+
+}
+
+class tropicFruit extends Fruit {
+	public $homeland;
+}
+
+$banana = new tropicFruit('yellow','good');
+
+var_dump($banana);
 
