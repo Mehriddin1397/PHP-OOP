@@ -156,7 +156,7 @@ $se2020 = new iPhone(2020,'12 hour',24);
 
 $nokia = new telefon(2000,'24 hour', 13);
 var_dump($se2020->getPower());
-					*/
+					
 
 
 
@@ -177,4 +177,31 @@ class ElektroCar extends Car {
 
 $tesla = new ElektroCar('sedan');
 var_dump($tesla);
+						*/
 
+
+
+
+//Interface
+
+//Interface'ga faqat funksiyani nomi yoziladi va interface ishlatilgan //classlarda u funksiyalar bo'lishi shart
+//Interface'ni classlarga 'implements' kalit so'zi orqali bog'laymiz
+//Interface'ni abstract classdan farqi interfaceda faqat metodlar bo'ladi //va metodlar faqat 'public' bulishi shart
+ 
+interface Car {
+	public function fuelVolume();
+	public function fuelConsumption();
+}
+
+class Tico implements Car {
+	public function fuelVolume(){
+		return "30 litr";
+	}
+
+	public function fuelConsumption(){
+		return "4 litr";
+	}
+} 
+
+$tico97 = new Tico;
+var_dump($tico97->fuelVolume());
