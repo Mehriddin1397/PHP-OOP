@@ -205,7 +205,7 @@ class Tico implements Car {
 
 $tico97 = new Tico;
 var_dump($tico97->fuelVolume());
-					*/
+					
 
 
 
@@ -235,4 +235,11 @@ use Power,Charging;
 $bwd_son = new BWD;
 
 var_dump($bwd_son->charging());
+					*/
 
+
+
+//Static Methods $ Property
+//static => obect yaratmasdan class orqali ishlatsa buladi.
+//static => class'ga tegishli, obectga tegishli emas
+//parent kalit so'zi classdan extends qilganida ota class'idagi static 	metodni chaqirishda ishlatiladi
