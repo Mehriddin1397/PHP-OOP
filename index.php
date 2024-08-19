@@ -162,5 +162,19 @@ var_dump($se2020->getPower());
 
 //Abstract class
 //Abstract classdan obekt olib bumaydi, faqat voris olib buladi(extends)
-//
+
+abstract class Car {
+	public $type;
+	public function __construct($type){
+		$this->type = $type;
+		}
+}
+
+class ElektroCar extends Car {
+
+
+}
+
+$tesla = new ElektroCar('sedan');
+var_dump($tesla);
 
