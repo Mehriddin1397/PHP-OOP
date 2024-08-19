@@ -177,7 +177,7 @@ class ElektroCar extends Car {
 
 $tesla = new ElektroCar('sedan');
 var_dump($tesla);
-						*/
+						
 
 
 
@@ -205,3 +205,34 @@ class Tico implements Car {
 
 $tico97 = new Tico;
 var_dump($tico97->fuelVolume());
+					*/
+
+
+
+//Traits => 1ta funksiyani(metod) bir nechta classlarda ishlatish
+//'use' kalit so'zi orqali classlarga traitni chaqirib olamiz
+
+trait Charging {
+	public function charging(){ 
+		return "2 hour";
+	}
+}
+
+trait Power {
+	public function power(){ 
+		return "450 km";
+	}
+}
+
+class Tesla {
+use Charging;
+}
+
+class BWD {
+use Power,Charging;
+}
+
+$bwd_son = new BWD;
+
+var_dump($bwd_son->charging());
+
