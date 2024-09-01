@@ -251,7 +251,7 @@ class BMW extends Car{
 	}
 }
 echo BMW::drive(36,4);
-						*/
+						
 
 
 
@@ -271,3 +271,17 @@ require 'classes/Car.php';
 
 $table =  new HTable();
 var_dump($table); 
+
+						*/
+
+
+
+//Autoloader => require qilib classlarni olib kelish noqulay bulganligi uchun ishlatiladi.
+
+require_once 'autoload.php'; //autoload.php faylini ichida autoload funksiyasini yozib, faylni olib kelamiz
+
+$tico = new Car();
+echo $tico->fluelVolume;
+
+ 
+
