@@ -235,7 +235,7 @@ use Power,Charging;
 $bwd_son = new BWD;
 
 var_dump($bwd_son->charging());
-					*/
+					
 
 
 
@@ -243,17 +243,7 @@ var_dump($bwd_son->charging());
 //static => obect yaratmasdan class orqali ishlatsa buladi.
 //static => class'ga tegishli, obectga tegishli emas
 //parent kalit so'zi classdan extends qilganida ota class'idagi static 	metodni chaqirishda ishlatiladi
-
-class Car{
-	public static $color= 'white';
-
-	public static function drive(int $fuelVolume,int $fuelConsumption){
-		$walk = ($fuelVolume/$fuelConsumption)*100;
-		echo self::$color;
-		return $walk; 
-		
-	}
-} 
+ 
 
 class BMW extends Car{
 	public function __construct(){
@@ -261,3 +251,23 @@ class BMW extends Car{
 	}
 }
 echo BMW::drive(36,4);
+						*/
+
+
+
+
+//Namespace
+//Boshqa fayllardagi classlarni 'require orqali olib kelamiz va bir biridan ajratish uchun u classlarga 'namespace beramiz.
+//use orqali u namespaceni ishlatamiz.
+
+
+use Classes\Kitchen\Table;
+use Classes\HTML\Table as HTable;// 2 ta bir xil class nomi bulib qolsa 'as' kalik so'zi orqali boshqa nom berish mumkin.
+
+require 'classes/html/Table.php';
+require 'classes/kitchen/Table.php'; 
+require 'classes/Car.php';
+
+
+$table =  new HTable();
+var_dump($table); 
