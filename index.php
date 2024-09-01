@@ -184,9 +184,9 @@ var_dump($tesla);
 
 //Interface
 
-//Interface'ga faqat funksiyani nomi yoziladi va interface ishlatilgan //classlarda u funksiyalar bo'lishi shart
+//Interface'ga faqat funksiyani nomi yoziladi va interface ishlatilgan classlarda u funksiyalar bo'lishi shart
 //Interface'ni classlarga 'implements' kalit so'zi orqali bog'laymiz
-//Interface'ni abstract classdan farqi interfaceda faqat metodlar bo'ladi //va metodlar faqat 'public' bulishi shart
+//Interface'ni abstract classdan farqi interfaceda faqat metodlar bo'ladi  va metodlar faqat 'public' bulishi shart
  
 interface Car {
 	public function fuelVolume();
@@ -243,3 +243,21 @@ var_dump($bwd_son->charging());
 //static => obect yaratmasdan class orqali ishlatsa buladi.
 //static => class'ga tegishli, obectga tegishli emas
 //parent kalit so'zi classdan extends qilganida ota class'idagi static 	metodni chaqirishda ishlatiladi
+
+class Car{
+	public static $color= 'white';
+
+	public static function drive(int $fuelVolume,int $fuelConsumption){
+		$walk = ($fuelVolume/$fuelConsumption)*100;
+		echo self::$color;
+		return $walk; 
+		
+	}
+} 
+
+class BMW extends Car{
+	public function __construct(){
+		parent::drive();//classdan 'extends qilganda ota classdagi static metodni 'parent' kalit so'zi orqali olib kelinadi.
+	}
+}
+echo BMW::drive(36,4);
