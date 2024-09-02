@@ -272,7 +272,7 @@ require 'classes/Car.php';
 $table =  new HTable();
 var_dump($table); 
 
-						*/
+						
 
 
 
@@ -283,5 +283,22 @@ require_once 'autoload.php'; //autoload.php faylini ichida autoload funksiyasini
 $tico = new Car();
 echo $tico->fluelVolume;
 
- 
+ 						*/
+
+
+
+
+//Clone -> Obektdan klon olish
+
+require_once 'autoload.php';
+
+$tico  = new Car();
+
+$matiz = clone $tico;//$matiz obekti ticodan clone qilayabdi, shunchaki tenglik quysa ticoni o'zgartirsa matizda ham o'zgarib ikkalasi teng bulib qoladi.
+
+$tico->color = 'red';//boshda ticoni rangi oq edi matizga clone qilganda, endi ticoni rangi qizil buldi lekin matizni rangi oqda qoldi.
+
+echo $matiz->color;
+
+
 

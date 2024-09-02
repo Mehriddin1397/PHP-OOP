@@ -1,6 +1,6 @@
 <?php
 class Car{
-	public static $color= 'white';
+	public $color= 'white';
 	public $fluelVolume = '40 litr';
 
 	public static function drive(int $fuelVolume,int $fuelConsumption){
